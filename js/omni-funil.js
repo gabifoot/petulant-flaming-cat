@@ -45,10 +45,11 @@ function sum_grupos() {
 		$(this).find('.dados').each(function() {
 			soma = soma + parseInt($(this).find('.metrica-valor').text().remove(/\./g));
 		});
+
 		$(this).find('.dados').each(function() {
 			var relacao = parseInt($(this).find('.metrica-valor').text().remove(/\./g)) / soma;
 			var porcentagem = (100 * relacao).format(2, '.', ',');
-			$(this).find('.coluna-esquerda').find('.metrica-porcentagem').text(porcentagem + '%');
+			$(this).find('.coluna-esquerda').find('.metrica-porcentagem').text(porcentagem);
 		});
 
 		soma = soma.format(0, '.', ',');
@@ -78,7 +79,7 @@ function load_metricas() {
 
 			//Calcula a porcentagem
 			var porcentagem = (100 * relacao).format(2, '.', ',');
-			$('.' + passo + '>.metrica-passo>.metrica-porcentagem').text(porcentagem + '%');
+			$('.' + passo + '>.metrica-passo>.metrica-porcentagem').text(porcentagem);
 			
 			//Calcula o tamanho das barras
 			var passo_anterior_barra = $('.' + passo_anterior + '>.metrica-grafico').width();
