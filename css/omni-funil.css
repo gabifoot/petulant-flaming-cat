@@ -1,0 +1,586 @@
+/* 
+==========> CSS Funil de Vendas Omnilogic <==========
+Versão: 1.1
+Data: 28/02/2014
+=====================================================
+*/
+/* ---------> Geral <---------- */
+html, body{
+	min-height:100%;
+	width:100%;
+	height:100%;
+	
+	}
+body{
+	font-family: 'Open Sans', sans-serif;
+	color:#fff;
+	font-size:14px;
+	}
+.funil-geral{
+	background-color:#222;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	border:0;
+	position:relative;
+	}
+.funil-geral:after{
+	clear:both;
+	}
+.data-screen{
+	height:100%;
+	position:relative;
+	margin-left:220px;
+	}
+.data-screen:after{
+	clear:both;
+	}
+.trava500{
+	min-width:500px;
+	}
+/* ---------> #Fim Geral <---------- */
+/* ---------> Cores <---------- */
+.funil-color1{
+	background-color:#473089;
+	}
+.funil-color2{
+	background-color:#5a3ab5;
+	}
+.funil-color3{
+	background-color:#36236d;
+	}
+.funil-color4{
+	background-color:#36236d;
+	}
+.funil-color5{
+	background-color:#ded8f0;
+	}
+.funil-color6{
+	background-color:#814fe6;
+	}
+/* ---------> Fim Cores <---------- */
+/* ---------> Posições <---------- */
+.left{
+	float:left;
+	}
+.left:after{
+	clear:both;
+	}
+.right{
+	float:right;
+	}
+.right:after{
+	clear:both;
+	}
+.line{
+	display:block;
+	clear:both;
+	width:100%;
+	}
+.esconder{
+	display:none;
+	}
+/* ---------> Fim Posições <---------- */
+/* ---------> Sidebar <---------- */
+.sidebar{
+	position:relative;
+	width:220px;
+	background-color:#222;
+	z-index:999999;
+	}
+.sidebar:after{
+	clear:both;
+	}
+.logo-funil{
+	width:180px;
+	height:30px;
+	margin-left:10px;
+	margin-top:30px;
+	}
+.funil-periodo{
+	display:block;
+	margin-bottom:30px;
+	}
+.funil-periodo label{
+	color:rgba(255,255,255,0.3);
+	font-size:12px;
+	font-weight:normal;
+	margin-left:10px;
+	}
+.funil-periodo input[type=date]{
+	width:200px;
+	margin-left:10px;
+	height:30px;
+	color:#666;
+	}
+ul.menu-config{
+	width:220px;
+	display:block;
+	margin:0;
+	padding:0;
+	border:0;
+	}
+ul.menu-config li.menu-config-pai{
+	background-color:#151515;
+	display: block;
+	width:180px;
+	padding:3px 0 3px 20px;
+	color:#fff;
+	font-size:14px;
+	font-weight:normal;
+	margin-bottom:20px;
+	}
+ul.menu-config li.menu-config-options{
+	margin-left:20px;
+	width:200px;
+	
+	display:block;
+	margin-bottom:10px;
+	}
+ul.menu-config li.menu-config-options a{
+	color:#fff;
+	font-size:12px;
+	font-weight:normal;
+	display:block;
+	opacity:0.8;
+	background-image:url(../img/aponta-sidebar.png);
+	background-position:20px 6px;
+	background-repeat:no-repeat;
+	padding:3px 10px 3px 30px;
+	}
+ul.menu-config li.menu-config-options a:hover{
+	text-decoration:none;
+	}
+ul.menu-config li.menu-config-options:hover{
+	background-color:#000;
+	}
+ul.menu-config li.menu-config-options.ativo{
+	background-color:#2e2e2e;
+	}
+/* ---------> #Fim Sidebar <---------- */
+/* ---------> Top <--------- */
+.top-screen{
+	position:relative;
+	height:70px;
+	z-index:9;
+	border-bottom:1px solid rgba(255, 255, 255, 0.1);
+	}
+ul.titulo{
+	padding:0;
+	border:0;
+	margin-top:0px;
+	margin-left:10px;
+	position:absolute;
+	bottom:5px;
+	margin-bottom:0;
+	}
+table ul.titulo{
+	margin:0;
+	position:relative;
+	}
+ul.titulo li{
+	list-style:none;
+	float:left;
+	font-size:24px;
+	font-weight:normal;
+	opacity:0.7;
+	margin-right:20px;
+	}
+
+ul.titulo li.sub{
+	background-image:url(../img/aponta-down.png);
+	background-position:right 17px;
+	background-repeat:no-repeat;
+	padding-right:25px;
+	}
+ul.titulo li.sub:hover{
+	opacity:1;
+	cursor:pointer;
+	}
+ul.titulo li ul.select-funil{
+	min-width: 210px;
+	max-width: 210px;
+	display: none;
+	border-radius: 0;
+	margin: 0px 0 0;
+	}
+ul.titulo li ul.select-funil>li{
+	color: #473089;
+	font-size:14px;
+	padding: 3px 15px;
+	display:block;
+	width: 100%;
+	}
+ul.titulo li ul.select-funil li:hover{
+	background-color:rgba(0,0,0,0.1);
+}
+
+ul.functionsbar{
+	padding:0;
+	border:0;
+	margin-top:0px;
+	position:absolute;
+	bottom:5px;
+	right:10px;
+	margin-bottom:0;
+	}
+ul.functionsbar li{
+	list-style:none;
+	float:left;
+	}
+ul.functionsbar li a{
+	display:block;
+	width:44px;
+	height:40px;
+	text-indent:-3000px;
+	background-image:url(../img/bt-voltar-funil.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	opacity:0.4;
+	}
+ul.functionsbar li a:hover{
+	opacity:0.7;
+	background-position:0 -50px;
+	}
+div.total{
+	position:absolute;
+	bottom:5px;
+	right:10px;
+	}
+div.total p{
+	margin:0;
+	border:0;
+	padding:0;
+	}
+div.total p.total-vendas{
+	opacity:0.7;
+	font-size:9px;
+	text-align:right;
+	}
+div.total p.valor-total span{
+	opacity:0.7;
+	font-size:9px;
+	}
+div.total p.valor-total{
+	text-align:right;
+	font-size:20px;
+	}
+/* ---------> #Fim Top <--------*/
+/* ----------> Config Screen <--------- */
+.config-screen{
+	position:absolute;
+	top:0;
+	z-index:888;
+	height:100%;
+	margin-left:220px;
+	width:0;
+	-moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+	}
+.config-screen.mostrar-config{
+	width: calc(100% - 220px);
+	width: -moz-calc(100% - 220px);
+    width: -webkit-calc(100% - 220px);
+	-moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.config-screen:after{
+	clear:both;
+	}
+.config-utm{
+	width:100%;
+	/*height:100%;*/
+	overflow:auto;
+	}
+/* Visualizar UTM */
+.table-visualizar-utm{
+	width:100%;
+	font-size:12px;
+	color:#473089;
+	}
+.table-visualizar-utm tr.header{
+	height:70px;
+	background-color:#473089;
+	color:#fff;
+	color:rgba(255,255,255,0.7);
+	font-size:18px;
+	}
+.table-visualizar-utm td{
+	text-align:left;
+	padding-left:10px;
+	}
+.table-visualizar-utm tr.dados{
+	height:30px;
+	}
+.table-visualizar-utm tr.dados:hover{
+	cursor:pointer;
+	background-color:rgba(0,0,0,0.1);
+	}
+/* config lote */
+.container-lote-utm{
+	padding:10px 0px;
+	}
+.config-screen label{
+	color:#473089;
+	font-size:12px;
+	font-weight:normal;
+	display:block;
+	}
+.container-lote-utm .line .left{
+	margin-left:10px;
+	}
+.container-lote-utm .line{
+	padding-top:30px;
+	}
+.config-screen label.radio{
+	font-size:10px;
+	vertical-align:middle;
+	}
+.config-screen select, .config-screen textarea{
+	color:#473089;
+	font-size:12px;
+	width:200px;
+	border:1px solid #473089;
+	background-color:#cfc7e5;
+	}
+.config-screen textarea{
+	height:250px;
+	}
+a.utm-select, a.utm-no-select{
+	display:block;
+	margin-left:20px;
+	margin-right:20px;
+	position:relative;
+	}
+a.utm-select{
+	margin-top:100px;
+	margin-bottom:5px;
+	}
+a.add-grupo{
+	position:relative;
+	padding-top:23px;
+	color:#473089;
+	font-size:12px;
+	background-image:url(../img/bt-add.png);
+	background-position:0 23px;
+	background-repeat:no-repeat;
+	padding-left:20px;
+	display:block;
+	}
+/* Configuração dos botões tipo radio*/
+.config-screen input#radio1, .config-screen input#radio2{
+	position:absolute
+	}
+.config-screen input[type=checkbox]:not(old),
+.config-screen input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  
+  opacity   : 0;
+}
+
+.config-screen input[type=checkbox]:not(old) + label,
+.config-screen input[type=radio   ]:not(old) + label{
+  display      : block;
+  margin-left  : -2em;
+ 
+}
+.config-screen input[type=checkbox]:not(old) + label > span,
+.config-screen input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 10px;
+  height           : 10px;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 1px solid #473089;
+  border-radius    : 10px;
+  background       : #cfc7e5;
+  vertical-align   : bottom;
+}
+
+.config-screen input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 4px;
+  height           : 4px;
+  margin           : 2px;
+  border           : 0.0625em solid #473089;
+  border-radius    : 4px;
+  background       : #473089;
+  background-image : #473089;
+}
+
+/* ----------> #Fim Config Screen <--------- */
+/* ----------> Funil Screen <--------- */
+.funil-screen{
+	height:100%;
+	}
+.funil-container{
+	/*height:100%;*/
+	padding:30px 10px;
+	}
+.funil-container:after{
+	clear:both;
+	}
+.funil-passo{
+	position:relative;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:30px;
+	margin-bottom:5px;
+}
+.funil-passo:hover{
+	opacity:0.4;
+	background-color:rgba(255, 255, 255, 0.3);
+	cursor:pointer;
+	}
+h2.metrica-passo{
+	font-weight:normal;
+	font-size:12px;
+	text-align:center;
+	margin:0;
+	padding:0;
+	border:0;
+	margin-bottom:5px;
+	}
+.funil-passo .metrica-grafico{
+	height:30px;
+	width:100%;
+	}
+/* >> Controle do Funil */
+div.passo-mercado-potencial .metrica-grafico{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+div.passo-visitantes .metrica-grafico{
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+div.passo-possiveis-clientes .metrica-grafico{
+	width:55%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+div.passo-possiveis-compradores .metrica-grafico{
+	width:35%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+div.passo-compradores .metrica-grafico{
+	width:15%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+div.passo-clientes .metrica-grafico{
+	width:10%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+div.passo-clientes-fieis .metrica-grafico{
+	width:5%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+/* #Fim Controle do Funil */
+/* MÉTRICAS */
+.metricas{
+	position:absolute;
+	width:100%;
+	overflow:auto;
+	top:100%;
+	height:100%;
+	-moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+	}
+.metricas.mostrar-metricas{
+	top:0;
+	-moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+	}
+.dados-metricas{
+	width:100%;
+	position:relative;
+	top:50px;
+	display:none;
+	}
+.dados-metricas.metricas-ativas{
+	display:block;
+	}
+h2.dados-tit{
+	font-size:18px;
+	font-weight:normal;
+	text-align:center;
+	opacity:0.7;
+	padding-top:30px;
+	}
+a.fechar-metrica{
+	font-size:12px;
+	color:rgba(255,255,255,0.4);
+	font-weight:bold;
+	position:absolute;
+	top:5px;
+	right:5px;
+	
+}
+a.fechar-metrica:hover{
+	text-decoration:none;
+	color:#fff;
+	}
+.table-metricas{
+	width:100%;
+	color:#fff;
+	font-size:12px;
+	color:rgba(255,255,255,0.7);
+	}
+.table-metricas tr{
+	height:40px;
+	}
+.table-metricas tr.header{
+	background-color:rgba(255,255,255,0.05);
+	border-bottom:1px solid rgba(255,255,255,0.1);
+	border-top:1px solid rgba(255,255,255,0.1);
+	height:30px;
+	}
+.table-metricas td.coluna-esquerda{
+	width:50%;
+	text-align:left;
+	padding-left:10px;
+	}
+.table-metricas td.coluna-direita{
+	width:50%;
+	text-align:right;
+	padding-right:10px;
+	}
+.table-metricas tr.dados:hover{
+	cursor:pointer;
+	background-color:rgba(0,0,0,0.1);
+	}
+/* Métrica Mercado Potencial */
+/* #Fim Métrica Mercado Potencial */
+/* Métrica Visitantes */
+/* #Fim Métrica Visitantes */
+/* Métrica Possíveis Clientes */
+/* #Fim Métrica Possíveis Clientes */
+/* Métrica Possíveis Compradores */
+/* #Fim Métrica Possíveis Compradores */
+/* Métrica Compradores */
+/* #Fim Métrica Compradores */
+/* Métrica Clientes */
+/* #Fim Métrica Clientes */
+/* Métrica Clientes fieis */
+/* #Fim Métrica Clientes Fieis */
+/* #Fim MÉTRICAS */
+/* ---------> #Fim Funil Screen <--------- */
+
