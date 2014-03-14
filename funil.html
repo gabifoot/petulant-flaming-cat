@@ -7,6 +7,7 @@
 		<title>Funil de vendas</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/omni-funil.css" rel="stylesheet">
+        <link href="css/botoes.css" media="all" rel="stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,7 +47,7 @@
 				<div class="top-screen top-screen-config funil-color6 esconder">
 					<ul class="titulo">
 						<li class="titulo-lista"> Configurações de UTM</li>
-						<li>|</li>
+						<!--<li>|</li>
 						<li class="sub dropdown"><span class="titulo-dropdown">Visitantes</span>
 							<ul class="select-funil dropdown-menu pull-left">
 								<li>Mercado Potencial</li>
@@ -57,7 +58,7 @@
 								<li>Clientes</li>
 								<li>Clientes Fieis</li>
 							</ul>
-						</li>
+						</li>-->
 					</ul>
                     <ul class="functionsbar">
                     	<li><a href="#" title="Voltar para o Funil" class="bt-voltar-funil">Voltar</a></li>
@@ -69,8 +70,8 @@
 				<div class="container-utm container-visualizar-utm esconder" >
 					<table class="table-visualizar-utm">
 						<tr class="header">
-							<td class="coluna-esquerda">UTM</td>
-							<td class="coluna-direita">
+							<td class="col-1">UTM</td>
+							<td class="col-2">
 								<ul class="titulo">
 									<li class="sub dropdown">Grupo
 										<ul class="select-funil dropdown-menu">
@@ -80,46 +81,66 @@
 									</li>
 								</ul>
 							</td>
+                            <td class="col-3">
+                            	<ul class="titulo">
+									<li class="sub dropdown">Tipo
+										<ul class="select-funil dropdown-menu">
+											<li>a</li>
+											<li>b</li>
+										</ul>
+									</li>
+								</ul>
+                            </td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 						<tr class="dados">
-							<td class="coluna-esquerda">Nome da UTM</td>
-							<td class="coluna-direita">Nome do Grupo</td>
+							<td class="col-1">Nome da UTM</td>
+							<td class="col-2">Nome do Grupo</td>
+                            <td class="col-3">Tipo</td>
 						</tr>
 					</table>
 				</div>
@@ -127,39 +148,20 @@
 				<!-- Configurar UTMs em lote -->
 				<div class="container-utm container-lote-utm esconder">
 					<div class="line">
-						<div class="left">
-							<label>Passo:</label>
-							<select class="select-steps">
-								<option value="selecione">Selecione um passo</option>
-								<option value="mercado-potencial">Mercado Potencial</option>
-								<option value="visitantes">Visitantes</option>
-								<option value="possiveis-clientes">Possiveis Clientes</option>
-								<option value="possiveis-compradores">Possiveis Compradores</option>
-								<option value="compradores">Compradores</option>
-								<option value="clientes">Clientes</option>
-								<option value="clientes-fieis">Clientes Fieis</option>
-							</select>
-						</div>
-						<div class="left">
 							<input id="radio1" value="1" type="radio" name="option" checked /><label class="radio" for="radio1"><span><span></span></span>Mostrar somente UTMs sem configuração</label>
 							<input id="radio2" value="2" type="radio" name="option" /><label class="radio" for="radio2"><span><span></span></span>Mostrar todas as UTMs</label>
 						</div>
-					</div>
-					<div class="line trava500">
+                    <div class="line">
 						<div class="left">
-							<label>UTMs disponíveis:</label>
-							<textarea class="utm-disponiveis"></textarea>
+							<label>Tipo:</label>
+							<select class="select-steps">
+								<option value="selecione">Selecione um tipo</option>
+								<option value="motores-busca">Motores de busca</option>
+								<option value="comparadores-preco">Comparadores de preço</option>
+								<option value="mailmarketing">Mailmarketing</option>
+							</select>
 						</div>
-						<div class="left">
-							<a href="#" class="utm-select"><img src="img/bt-direita.png" /></a>
-							<a href="#" class="utm-no-select"><img src="img/bt-esquerda.png" /></a>
-						</div>
-						<div class="left">
-							<label>UTMs selecionadas:</label>
-							<textarea class="utm-selecionadas"></textarea>
-						</div>
-					</div>
-					<div class="line">
+						<div class="line">
 						<div class="left"><label>Agrupar como:</label>
 							<select class="select-steps">
 								<option value="selecione">Selecione um grupo</option>
@@ -176,13 +178,31 @@
 							<a href="#" class="add-grupo">Novo Grupo</a>
 						</div>
 					</div>
+					</div>
+					<div class="line trava500">
+						<div class="left">
+							<label>UTMs disponíveis:</label>
+							<textarea class="utm-disponiveis"></textarea>
+						</div>
+						<div class="left">
+							<a href="#" class="utm-select"><img src="img/bt-direita.png" /></a>
+							<a href="#" class="utm-no-select"><img src="img/bt-esquerda.png" /></a>
+						</div>
+						<div class="left">
+							<label>UTMs selecionadas:</label>
+							<textarea class="utm-selecionadas"></textarea>
+						</div>
+					</div>
+					<div class="line">
+                    <input type="submit" value="Salvar" name="salvar" class="btn bts-funil bt-salvar funil-color1" />
+                    </div>
 				</div>
 				<!-- #Fim Configurar UTMs em lote -->
 			</div>
 			<!-- =========== #Fim CONFIGURAÇÕES ========= -->
-
-
-
+			<!-- ===//=== -->
+			<!-- A partir deste ponto iremos tratar a interface do Funil -->
+			<!-- ===//=== -->
 			<!-- =========== FUNIL ========= -->
 			<div class="data-screen">
 				<div class="funil-screen funil-color2">
@@ -190,13 +210,15 @@
 						<ul class="titulo">
 							<li class="sub dropdown">Funil de Vendas
 								<ul class="select-funil dropdown-menu">
-									<li></li>
+									<li>Funil 1</li>
+                                    <li>Funil 2</li>
+                                    <li>Funil 3</li>
 								</ul>
 							</li>
 						</ul>
 						<div class="total">
 							<p class="total-vendas">Total de vendas</p>
-							<p class="valor-total"><span class="moeda">R$</span><span class= "metrica-venda">1.584.794,00</p>
+							<p class="valor-total"><span class="moeda">R$</span>1.584.794,00</p>
 						</div>
 					</div>
 					<!-- Passo Mercado Potencial -->
@@ -238,27 +260,54 @@
 						
 					<!-- #Fim Passos -->
 					</div>
+             <!-- =========== Aprofundando nas análises ========= -->
+			<!-- ===//=== -->
+			<!-- São três estágios de análise, sendo: 1 o funil, 2 tipos e 3 grupos -->
+			<!-- ===//=== -->
+					<!-- =========== Estagio 2 - Tipos ========= -->
 					<!-- colocar Divs dos dados apronfundados -->
 					<!-- Para ativar, acrescentar a class: mostrar-metricas -->
+                    <!-- As DIVs com os dados dos Estágios 3 se encontram dentro de cada div do Estágio 2 correspondente -->
+                    <!-- Para ativar o estágio 3, acrescentar a class: mostrar-metricas-estagio3 -->
 					<div class="metricas funil-color4 esconder">
 					<!-- Dados Mercado Potencial -->
-						<div class="dados-metricas dados-mercado-potencial">
+						<div class="dados-metricas dados-mercado-potencial funil-color4">
 							<h2 class="dados-tit">Mercado Potencial</h2>
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita"></td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2"></td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">7.520.634</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">7.520.634</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">2.905.487</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">2.905.487</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
+                            <!-- Dados Estágio 3 - Mercado potencial-->
+                            <div class="dados-metricas-estagio3 dados-mercado-potencial-estagio3 funil-color2">
+							<h2 class="dados-tit">Mercado Potencial</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2"></td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">7.520.634</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">2.905.487</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+						</div>
+                            <!-- #Fim Dados Estágio 3 -->
 						</div>
 						<!-- Dados Visitantes -->
 						<!-- Para ativar, acrescentar a class: metricas-ativas -->
@@ -267,18 +316,38 @@
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
+                             <!-- Dados Estágio 3 - visitantes-->
+                            <div class="dados-metricas-estagio3 dados-visitantes-estagio3 funil-color2 ">
+							<h2 class="dados-tit">Visitantes</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+						</div>
+                            <!-- #Fim Dados Estágio 3 -->
 						</div>
 						<!-- Dados Possíveis Clientes -->
 						<div class="dados-metricas dados-possiveis-clientes funil-color4">
@@ -286,18 +355,38 @@
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">2.531.017</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">2.531.017</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">658.688</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">658.688</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
+                            <!-- Dados Estágio 3 - Possíveis Clientes-->
+                            <div class="dados-metricas-estagio3 dados-possiveis-clientes-estagio3 funil-color2 ">
+							<h2 class="dados-tit">Possíveis Clientes</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+						</div>
+                            <!-- #Fim Dados Estágio 3 -->
 						</div>
 						<!-- Dados Possíveis Compradores -->
 						<div class="dados-metricas dados-possiveis-compradores">
@@ -305,18 +394,38 @@
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">1.123.785</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">1.123.785</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">300.568</span>  |  <span class="metrica-porcentagem"></span>%</td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">300.568</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
+                            <!-- Dados Estágio 3 - Possíveis Compradores -->
+                            <div class="dados-metricas-estagio3 dados-possiveis-compradores-estagio3 funil-color2 ">
+							<h2 class="dados-tit">Possíveis Compradores</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+						</div>
+                            <!-- #Fim Dados Estágio 3 -->
 						</div>
 						<!-- Dados Compradores -->
 						<div class="dados-metricas dados-compradores">
@@ -324,18 +433,38 @@
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">689.565</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">932.465,00</span></td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">689.565</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">932.465,00</span></td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">256.569</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">439.875,00</span></td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">256.569</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">439.875,00</span></td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
+                            <!-- Dados Estágio 3 - Compradores -->
+                            <div class="dados-metricas-estagio3 dados-compradores-estagio3 funil-color2 ">
+							<h2 class="dados-tit">Compradores</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+						</div>
+                            <!-- #Fim Dados Estágio 3 -->
 						</div>
 						<!-- Dados Clientes -->
 						<div class="dados-metricas dados-clientes">
@@ -343,18 +472,38 @@
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">3.502</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">25.897,00</span></td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.502</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">25.897,00</span></td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">1.600</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">12.000,00</span></td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.600</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">12.000,00</span></td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
+                            <!-- Dados Estágio 3 - Clientes -->
+                            <div class="dados-metricas-estagio3 dados-clientes-estagio3 funil-color2 ">
+							<h2 class="dados-tit">Clientes</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+						</div>
+                            <!-- #Fim Dados Estágio 3 -->
 						</div>
 						<!-- Dados Clientes Fieis -->
 						<div class="dados-metricas dados-clientes-fieis">
@@ -362,24 +511,45 @@
 							<a href="#" title="Fechar" class="fechar-metrica">X</a>
 							<table class="table-metricas">
 								<tr class="header">
-									<td class="coluna-esquerda">Total de Visitas  |  <span class="metrica-valor"></span></td>
-									<td class="coluna-direita">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">Sites de Buscas  |  <span class="metrica-valor">920</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">9.862,00</span></td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">920</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">9.862,00</span></td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 								<tr class="dados">
-									<td class="coluna-esquerda">E-mail  |  <span class="metrica-valor">200</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">1.750,00</span></td>
-									<td class="coluna-direita"><span class="metrica-porcentagem"></span>%</td>
+									<td class="col-1">E-mail  |  <span class="metrica-valor">200</span>  |  <span class="metrica-porcentagem"></span>%  |  <span class="moeda">R$</span><span class= "metrica-venda">1.750,00</span></td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+							</table>
+                            <!-- Dados Estágio 3 - Clientes Fieis -->
+                            <div class="dados-metricas-estagio3 dados-clientes-fieis-estagio3 funil-color2 ">
+							<h2 class="dados-tit">Clientes Fiéis</h2>
+							<a href="#" title="Fechar" class="fechar-metrica">X</a>
+							<table class="table-metricas">
+								<tr class="header">
+									<td class="col-1">Total de Visitas  |  <span class="metrica-valor"></span></td>
+									<td class="col-2">Taxa de Rejeição  |  <span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">Sites de Buscas  |  <span class="metrica-valor">3.456.872</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
+								</tr>
+								<tr class="dados">
+									<td class="col-1">E-mail  |  <span class="metrica-valor">1.500.005</span>  |  <span class="metrica-porcentagem"></span>%</td>
+									<td class="col-2"><span class="metrica-porcentagem"></span>%</td>
 								</tr>
 							</table>
 						</div>
+                            <!-- #Fim Dados Estágio 3 -->
+						</div>
 					</div>
-					<!-- #Fim Divs Dados -->
+                    
+					<!-- #Fim Divs Dados Aprofundadeos -->
 				</div>
 			</div>
-			<!-- =========== #Fim FUNIL ========= -->
+			<!-- =========== #Fim INTERFACE FUNIL ========= -->
 		</div>
 	</body>
 </html>
