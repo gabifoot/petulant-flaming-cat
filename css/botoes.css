@@ -1,0 +1,27 @@
+/* ---> Botões <--- */
+.btn{
+	padding:5px 10px 5px 35px;
+	border-color:transparent;
+	border-radius:4px;
+	text-decoration:none;
+	}
+.bt-salvar {
+	background-image: url(../img/icon-disket.png);
+	background-position:10px 5px;
+	background-repeat:no-repeat;
+	}
+.bt-cancelar{
+	background-image:url(../img/icon-cancel.png);
+	background-position:10px 5px;
+	background-repeat:no-repeat;
+	}
+.bt-visualizar-template{
+	background-image:url(../img/icon-olho.png);
+	background-position:8px 5px;
+	background-repeat:no-repeat;
+	}
+.bt-enviar-email{
+	background-image:url(../img/icon-envelope-mail.png);
+	background-position:8px 5px;
+	background-repeat:no-repeat;
+	}

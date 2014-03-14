@@ -24,6 +24,7 @@ body{
 	padding:0;
 	border:0;
 	position:relative;
+	overflow:auto;
 	}
 .funil-geral:after{
 	clear:both;
@@ -314,6 +315,15 @@ div.total p.valor-total{
 	text-align:left;
 	padding-left:10px;
 	}
+.table-visualizar-utm td.col-1{
+	width:60%;
+	}
+.table-visualizar-utm td.col-2{
+	width:20%;
+	}
+.table-visualizar-utm td.col-3{
+	width:20%;
+	}
 .table-visualizar-utm tr.dados{
 	height:30px;
 	}
@@ -340,6 +350,8 @@ div.total p.valor-total{
 .config-screen label.radio{
 	font-size:10px;
 	vertical-align:middle;
+	margin-right:40px;
+	padding-left:10px !important;
 	}
 .config-screen select, .config-screen textarea{
 	color:#473089;
@@ -387,8 +399,9 @@ a.add-grupo{
 
 .config-screen input[type=checkbox]:not(old) + label,
 .config-screen input[type=radio   ]:not(old) + label{
-  display      : block;
-  margin-left  : -2em;
+  /*display      : block*/;
+ /* margin-left  : -2em;*/
+  float:left;
  
 }
 .config-screen input[type=checkbox]:not(old) + label > span,
@@ -494,7 +507,7 @@ div.passo-clientes-fieis .metrica-grafico{
 .metricas{
 	position:absolute;
 	width:100%;
-	overflow:auto;
+	/*overflow:auto;*/
 	top:100%;
 	height:100%;
 	-moz-transition: all 0.5s linear;
@@ -511,8 +524,16 @@ div.passo-clientes-fieis .metrica-grafico{
 	}
 .dados-metricas{
 	width:100%;
+	min-height:100%;
 	position:relative;
 	top:50px;
+	display:none;
+	}
+.dados-metricas-estagio3{
+	width:100%;
+	min-height:100%;
+	position:absolute;
+	top:90px;
 	display:none;
 	}
 .dados-metricas.metricas-ativas{
@@ -524,6 +545,9 @@ h2.dados-tit{
 	text-align:center;
 	opacity:0.7;
 	padding-top:30px;
+	}
+.dados-metricas-estagio3 h2.dados-tit{
+	margin-top:0;
 	}
 a.fechar-metrica{
 	font-size:12px;
@@ -553,12 +577,12 @@ a.fechar-metrica:hover{
 	border-top:1px solid rgba(255,255,255,0.1);
 	height:30px;
 	}
-.table-metricas td.coluna-esquerda{
+.table-metricas td.col-1{
 	width:50%;
 	text-align:left;
 	padding-left:10px;
 	}
-.table-metricas td.coluna-direita{
+.table-metricas td.col-2{
 	width:50%;
 	text-align:right;
 	padding-right:10px;
@@ -583,4 +607,9 @@ a.fechar-metrica:hover{
 /* #Fim Métrica Clientes Fieis */
 /* #Fim MÉTRICAS */
 /* ---------> #Fim Funil Screen <--------- */
-
+/* ---------> Botões <---------- */
+.bts-funil{
+	border-radius:0 !important;
+	margin-left:10px;
+	}
+/* ---------> #Fim Botões <---------- */
