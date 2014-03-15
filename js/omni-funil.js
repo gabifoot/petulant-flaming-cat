@@ -49,7 +49,7 @@ function sum_grupos() {
 		$(this).find('.dados').each(function() {
 			var relacao = parseInt($(this).find('.metrica-valor').text().remove(/\./g)) / soma;
 			var porcentagem = (100 * relacao).format(2, '.', ',');
-			$(this).find('.coluna-esquerda').find('.metrica-porcentagem').text(porcentagem);
+			$(this).find('.coluna-1').find('.metrica-porcentagem').text(porcentagem);
 		});
 
 		soma = soma.format(0, '.', ',');
