@@ -24,16 +24,21 @@ function hide_container_configs() {
 
 }
 
-function show_metricas() {
+function show_metricas(clicked) {
 
-	$('.metricas').addClass('mostrar-metricas');
+	$(clicked).addClass('mostrar-metricas');
 
 }
 
-function hide_metricas() {
+function hide_metricas(clicked) {
 
-	$('.metricas>div').removeClass('metricas-ativas');
-	$('.metricas').addClass('esconder');
+	$(clicked).parent().removeClass('metricas-ativas');
+	$(clicked).parent().parent().addClass('esconder');
+	if ($(clicked).parent().hasClass('dados-metricas')) {
+		$(clicked).parent().find('.metricas-estagio3').addClass('esconder');
+		$(clicked).parent().find('.metricas-estagio3').removeClass('mostrar-metricas');
+		$(clicked).parent().find('.metricas-estagio3').children().removeClass('mostrar-ativas');
+	};
 
 }
 
@@ -158,15 +163,30 @@ $(function() {
 		var clicked = $(this).attr('class').replace(/.*passo-/, 'dados-');
 		$('.' + clicked).addClass('metricas-ativas');
 
-		setTimeout(function() { show_metricas() }, 0.1*second);
+		setTimeout(function() { show_metricas('.metricas') }, 0.1*second);
 
 	});
 
-	//Clicar em fechar algum nível do funil
+	//Clicar em fechar alguma camada
 	$('.fechar-metrica').click(function() {
+		
+		var clicked = this;
+		$(this).parent().parent().removeClass('mostrar-metricas');
+		setTimeout(function() { hide_metricas(clicked) }, 0.6*second); // 0.1 do timeout + 0.5 do transition no css
 
-		$('.metricas').removeClass('mostrar-metricas');
-		setTimeout(function() { hide_metricas() }, 0.6*second); // 0.1 do timeout + 0.5 do transition no css
+	});
+	
+	//Clicar em algum tipo, dentro do nível do funil
+	$('.dados-metricas>.table-metricas .dados').click(function() {
+
+		$(this).parents('.table-metricas').siblings('.metricas-estagio3').children().removeClass('metricas-ativas');
+		$(this).parents('.table-metricas').siblings('.metricas-estagio3').removeClass('esconder');
+
+		var clicked = $(this).find('.metrica-nome').text();
+		$(this).parents('.table-metricas').siblings('.metricas-estagio3').children(':contains("' + clicked + '")').addClass('metricas-ativas');
+
+		var classe = '.' + $(this).parents('.table-metricas').siblings('.metricas-estagio3').attr('class').replace(/ /g,'.');
+		setTimeout(function() { show_metricas(classe) }, 0.1*second);
 
 	});
 

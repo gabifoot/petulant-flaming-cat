@@ -277,18 +277,18 @@ div.total p.valor-total{
 	margin-left:220px;
 	width:0;
 	-moz-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 	}
 .config-screen.mostrar-config{
 	width: calc(100% - 220px);
 	width: -moz-calc(100% - 220px);
-    width: -webkit-calc(100% - 220px);
+	width: -webkit-calc(100% - 220px);
 	-moz-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 }
 .config-screen:after{
 	clear:both;
@@ -390,8 +390,8 @@ a.add-grupo{
 	}
 .config-screen input[type=checkbox]:not(old),
 .config-screen input[type=radio   ]:not(old){
-  width     : 2em;
-  margin    : 0;
+  width	 : 2em;
+  margin	: 0;
   padding   : 0;
   
   opacity   : 0;
@@ -399,31 +399,31 @@ a.add-grupo{
 
 .config-screen input[type=checkbox]:not(old) + label,
 .config-screen input[type=radio   ]:not(old) + label{
-  /*display      : block*/;
+  /*display	  : block*/;
  /* margin-left  : -2em;*/
   float:left;
  
 }
 .config-screen input[type=checkbox]:not(old) + label > span,
 .config-screen input[type=radio   ]:not(old) + label > span{
-  display          : inline-block;
-  width            : 10px;
-  height           : 10px;
-  margin           : 0.25em 0.5em 0.25em 0.25em;
-  border           : 1px solid #473089;
-  border-radius    : 10px;
-  background       : #cfc7e5;
+  display		  : inline-block;
+  width			: 10px;
+  height		   : 10px;
+  margin		   : 0.25em 0.5em 0.25em 0.25em;
+  border		   : 1px solid #473089;
+  border-radius	: 10px;
+  background	   : #cfc7e5;
   vertical-align   : bottom;
 }
 
 .config-screen input[type=radio]:not(old):checked +  label > span > span{
-  display          : block;
-  width            : 4px;
-  height           : 4px;
-  margin           : 2px;
-  border           : 0.0625em solid #473089;
-  border-radius    : 4px;
-  background       : #473089;
+  display		  : block;
+  width			: 4px;
+  height		   : 4px;
+  margin		   : 2px;
+  border		   : 0.0625em solid #473089;
+  border-radius	: 4px;
+  background	   : #473089;
   background-image : #473089;
 }
 
@@ -511,32 +511,52 @@ div.passo-clientes-fieis .metrica-grafico{
 	top:100%;
 	height:100%;
 	-moz-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 	}
 .metricas.mostrar-metricas{
 	top:0;
 	-moz-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 	}
 .dados-metricas{
 	width:100%;
-	min-height:100%;
 	position:relative;
 	top:50px;
 	display:none;
-	}
-.dados-metricas-estagio3{
-	width:100%;
-	min-height:100%;
-	position:absolute;
-	top:90px;
-	display:none;
+	height: calc(100% - 70px);
+	height: -moz-calc(100% - 70px);
+	height: -webkit-calc(100% - 70px);
 	}
 .dados-metricas.metricas-ativas{
+	display:block;
+	}
+.metricas-estagio3{
+	width:100%;
+	position:absolute;
+	top:100%;
+	-moz-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	height: calc(100% - 90px);
+	height: -moz-calc(100% - 90px);
+	height: -webkit-calc(100% - 90px);
+	}
+.metricas-estagio3.mostrar-metricas{
+	top:90px;
+	-moz-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	}
+	.dados-metricas-estagio3{
+	display:none;
+	}
+.dados-metricas-estagio3.metricas-ativas{
 	display:block;
 	}
 h2.dados-tit{
