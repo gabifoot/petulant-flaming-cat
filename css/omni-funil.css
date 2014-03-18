@@ -24,7 +24,7 @@ body{
 	padding:0;
 	border:0;
 	position:relative;
-	overflow:auto;
+	overflow: hidden;
 	}
 .funil-geral:after{
 	clear:both;
@@ -507,16 +507,17 @@ div.passo-clientes-fieis .metrica-grafico{
 .metricas{
 	position:absolute;
 	width:100%;
-	/*overflow:auto;*/
 	top:100%;
-	height:100%;
+	height: -webkit-calc(100% - 70px);
+	height: -moz-calc(100% - 70px);
+	height: calc(100% - 70px);
 	-moz-transition: all 0.5s linear;
 	-webkit-transition: all 0.5s linear;
 	-o-transition: all 0.5s linear;
 	transition: all 0.5s linear;
 	}
 .metricas.mostrar-metricas{
-	top:0;
+	top:70px;
 	-moz-transition: all 0.5s linear;
 	-webkit-transition: all 0.5s linear;
 	-o-transition: all 0.5s linear;
@@ -525,11 +526,8 @@ div.passo-clientes-fieis .metrica-grafico{
 .dados-metricas{
 	width:100%;
 	position:relative;
-	top:50px;
 	display:none;
-	height: calc(100% - 70px);
-	height: -moz-calc(100% - 70px);
-	height: -webkit-calc(100% - 70px);
+	min-height:100%;
 	}
 .dados-metricas.metricas-ativas{
 	display:block;
@@ -553,7 +551,7 @@ div.passo-clientes-fieis .metrica-grafico{
 	-o-transition: all 0.5s linear;
 	transition: all 0.5s linear;
 	}
-	.dados-metricas-estagio3{
+.dados-metricas-estagio3{
 	display:none;
 	}
 .dados-metricas-estagio3.metricas-ativas{
@@ -565,6 +563,7 @@ h2.dados-tit{
 	text-align:center;
 	opacity:0.7;
 	padding-top:30px;
+	margin-top:0;
 	}
 .dados-metricas-estagio3 h2.dados-tit{
 	margin-top:0;

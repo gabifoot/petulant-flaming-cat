@@ -26,18 +26,35 @@ function hide_container_configs() {
 
 function show_metricas(clicked) {
 
+	$(clicked).css('overflow', 'auto');
 	$(clicked).addClass('mostrar-metricas');
+	if ($(clicked).parents('.metricas').length > 0) {
+		$(clicked).parents('.metricas').css('overflow', '');
+	};
+
+}
+
+function hide_dados(clicked) {
+
+	if ($(clicked).parents('.metricas').length > 0) {
+		$(clicked).parent().children('.table-metricas').find('.dados').addClass('esconder');
+	};
 
 }
 
 function hide_metricas(clicked) {
 
+	$(clicked).parent().parent().css('overflow', '');
 	$(clicked).parent().removeClass('metricas-ativas');
 	$(clicked).parent().parent().addClass('esconder');
 	if ($(clicked).parent().hasClass('dados-metricas')) {
+		$(clicked).parent().find('.metricas-estagio3').css('overflow', '');
 		$(clicked).parent().find('.metricas-estagio3').addClass('esconder');
 		$(clicked).parent().find('.metricas-estagio3').removeClass('mostrar-metricas');
 		$(clicked).parent().find('.metricas-estagio3').children().removeClass('mostrar-ativas');
+	}
+	else {
+		$(clicked).parents('.metricas').css('overflow', 'auto');
 	};
 
 }
@@ -88,7 +105,7 @@ function load_metricas() {
 			$('.' + passo + '>.metrica-passo>.metrica-porcentagem').text(porcentagem_valor);
 			
 			//Calcula o tamanho das barras
-			var porcentagem_barra = (relacao * porcentagem_barra_anterior).ceil();
+			var porcentagem_barra = (relacao * porcentagem_barra_anterior).format(2, ',', '.');
 			$('.' + passo + '>.metrica-grafico').width(porcentagem_barra + '%');
 
 			passo_anterior = passo;
@@ -175,6 +192,7 @@ $(function() {
 		
 		var clicked = this;
 		$(this).parent().parent().removeClass('mostrar-metricas');
+		$(this).parents('.dados-metricas').children('.table-metricas').find('.dados').removeClass('esconder');
 		setTimeout(function() { hide_metricas(clicked) }, 0.6*second); // 0.1 do timeout + 0.5 do transition no css
 
 	});
@@ -182,14 +200,15 @@ $(function() {
 	//Clicar em algum tipo, dentro do nível do funil
 	$('.dados-metricas>.table-metricas .dados').click(function() {
 
-		$(this).parents('.table-metricas').siblings('.metricas-estagio3').children().removeClass('metricas-ativas');
-		$(this).parents('.table-metricas').siblings('.metricas-estagio3').removeClass('esconder');
-
 		var clicked = $(this).find('.metrica-nome').text();
-		$(this).parents('.table-metricas').siblings('.metricas-estagio3').children(':contains("' + clicked + '")').addClass('metricas-ativas');
-
-		var classe = '.' + $(this).parents('.table-metricas').siblings('.metricas-estagio3').attr('class').replace(/ /g,'.');
-		setTimeout(function() { show_metricas(classe) }, 0.1*second);
+		if ($(this).parents('.table-metricas').siblings('.metricas-estagio3').find('.dados-tit:contains("' + clicked + '")').length > 0) {
+			$(this).parents('.table-metricas').siblings('.metricas-estagio3').children().removeClass('metricas-ativas');
+			$(this).parents('.table-metricas').siblings('.metricas-estagio3').removeClass('esconder');
+			$(this).parents('.table-metricas').siblings('.metricas-estagio3').find('.dados-tit:contains("' + clicked + '")').parent().addClass('metricas-ativas').length
+			var classe = '.' + $(this).parents('.table-metricas').siblings('.metricas-estagio3').attr('class').replace(/ /g,'.');
+			setTimeout(function() { show_metricas(classe) }, 0.1*second);
+			setTimeout(function() { hide_dados(classe) }, 0.6*second);
+		};
 
 	});
 
