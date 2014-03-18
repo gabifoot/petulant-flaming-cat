@@ -273,10 +273,10 @@
 				<!-- Configurar UTMs em lote -->
 				<div class="container-utm container-lote-utm esconder">
 					<div class="line">
-						<input id="radio1" value="1" type="radio" name="option" checked /><label class="radio" for="radio1"><span><span></span></span>Mostrar somente UTMs sem configuração</label>
+						<input id="radio1" value="1" type="radio" name="option" /><label class="radio" for="radio1"><span><span></span></span>Mostrar somente UTMs sem configuração</label>
 						<input id="radio2" value="2" type="radio" name="option" /><label class="radio" for="radio2"><span><span></span></span>Mostrar todas as UTMs</label>
 					</div>
-					<div class="line">
+					<div class="line esconder">
 						<div class="left">
 							<label>Tipo:</label>
 							<select class="select-steps">
@@ -286,26 +286,26 @@
 								<option value="mailmarketing">Mailmarketing</option>
 							</select>
 						</div>
-						<div class="line">
-							<div class="left">
-								<label>Agrupar como:</label>
-								<select class="select-steps">
-									<option value="selecione">Selecione um grupo</option>
-									<option value="grupo">Grupo</option>
-									<option value="grupo">Grupo</option>
-									<option value="grupo">Grupo</option>
-									<option value="grupo">Grupo</option>
-									<option value="grupo">Grupo</option>
-									<option value="grupo">Grupo</option>
-									<option value="grupo">Grupo</option>
-								</select>
-							</div>
-							<div class="left">
-								<a href="#" class="add-grupo">Novo Grupo</a>
-							</div>
+					</div>
+					<div class="line esconder">
+						<div class="left">
+							<label>Agrupar como:</label>
+							<select class="select-steps">
+								<option value="selecione">Selecione um grupo</option>
+								<option value="grupo">Grupo</option>
+								<option value="grupo">Grupo</option>
+								<option value="grupo">Grupo</option>
+								<option value="grupo">Grupo</option>
+								<option value="grupo">Grupo</option>
+								<option value="grupo">Grupo</option>
+								<option value="grupo">Grupo</option>
+							</select>
+						</div>
+						<div class="left">
+							<a href="#" class="add-grupo">Novo Grupo</a>
 						</div>
 					</div>
-					<div class="line trava500">
+					<div class="line esconder trava500">
 						<div class="left">
 							<label>UTMs disponíveis:</label>
 							<textarea class="utm-disponiveis"></textarea>
@@ -319,7 +319,7 @@
 							<textarea class="utm-selecionadas"></textarea>
 						</div>
 					</div>
-					<div class="line">
+					<div class="line esconder">
 						<input type="submit" value="Salvar" name="salvar" class="btn bts-funil bt-salvar funil-color1" />
 					</div>
 				</div>

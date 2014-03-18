@@ -229,4 +229,15 @@ $(function() {
 		//Carrega os dados
 
 	});
+
+	//Preencher formulário
+	$('.container-utm.container-lote-utm :input').change(function() {
+		$(this).parents('.line').next().removeClass('esconder');
+	});
+
+	$('.container-utm.container-lote-utm :submit').click(function() {
+		$(this).parents('.container-utm').children('.line').addClass('esconder');
+		$(this).parents('.container-utm').children('.line:first').removeClass('esconder');
+		$('.menu-config-options>a.option-visualizar-utm').click();
+	});
 });
