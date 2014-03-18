@@ -289,14 +289,10 @@ div.total p.valor-total{
 	-webkit-transition: all 0.5s linear;
 	-o-transition: all 0.5s linear;
 	transition: all 0.5s linear;
+	overflow:auto;
 }
 .config-screen:after{
 	clear:both;
-	}
-.config-utm{
-	width:100%;
-	/*height:100%;*/
-	overflow:auto;
 	}
 /* Visualizar UTM */
 .table-visualizar-utm{
