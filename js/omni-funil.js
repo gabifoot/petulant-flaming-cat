@@ -72,6 +72,7 @@ function load_metricas() {
 
 	var passo_anterior = null;
 	var passo = null;
+	var porcentagem_barra_anterior = 0;
 
 	$('.funil-passo').each(function() {
 		if (passo_anterior != null) {
@@ -80,20 +81,22 @@ function load_metricas() {
 
 			var passo_anterior_valor = parseInt($('.' + passo_anterior + '>.metrica-passo>.metrica-valor').text().remove(/\./g));
 			var passo_valor = parseInt($('.' + passo + '>.metrica-passo>.metrica-valor').text().remove(/\./g));
-			var relacao = passo_valor / passo_anterior_valor;
 
 			//Calcula a porcentagem
-			var porcentagem = (100 * relacao).format(2, '.', ',');
-			$('.' + passo + '>.metrica-passo>.metrica-porcentagem').text(porcentagem);
+			var relacao = passo_valor / passo_anterior_valor;
+			var porcentagem_valor = (100 * relacao).format(2, '.', ',');
+			$('.' + passo + '>.metrica-passo>.metrica-porcentagem').text(porcentagem_valor);
 			
 			//Calcula o tamanho das barras
-			var passo_anterior_barra = $('.' + passo_anterior + '>.metrica-grafico').width();
-			$('.' + passo + '>.metrica-grafico').width(passo_anterior_barra * relacao);
+			var porcentagem_barra = (relacao * porcentagem_barra_anterior).ceil();
+			$('.' + passo + '>.metrica-grafico').width(porcentagem_barra + '%');
 
 			passo_anterior = passo;
+			porcentagem_barra_anterior = porcentagem_barra;
 		}
 		else {
 			passo_anterior = $(this).attr('class').replace(/ /g,'.');
+			porcentagem_barra_anterior = 100;
 		};
 	});
 
