@@ -85,8 +85,10 @@ function sum_metricas() {
 	var soma = 0;
 	var grupo = null;
 
+	//Cada nível do funil
 	$('.dados-metricas').each(function() {
 		
+		//Dentro de cada nível, cada grupo
 		$('.dados-metricas-estagio3').each(function() {
 		
 			soma = treat_sum_and_percentage(this);
