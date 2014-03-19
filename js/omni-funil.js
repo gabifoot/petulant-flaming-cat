@@ -59,17 +59,15 @@ function hide_metricas(clicked) {
 
 }
 
-function sum_metricas_estagio3() {
-	$('.dados-metricas').each(function() {
-		$('.dados-metricas-estagio3').each(function() {
+function treat_sum_and_percentage(group) {
 		
 		var soma = 0;
 
-		$(this).children('.table-metricas').find('.dados').each(function() {
+		$(group).children('.table-metricas').find('.dados').each(function() {
 			soma = soma + parseInt($(this).find('.metrica-valor').text().remove(/\./g));
 		});
 
-		$(this).children('.table-metricas').find('.dados').each(function() {
+		$(group).children('.table-metricas').find('.dados').each(function() {
 			var relacao = parseInt($(this).find('.metrica-valor').text().remove(/\./g)) / soma;
 			var porcentagem = (100 * relacao).format(2, '.', ',');
 			$(this).children('.col-1').children('.metrica-porcentagem').text(porcentagem);
@@ -77,35 +75,28 @@ function sum_metricas_estagio3() {
 
 		soma = soma.format(0, '.', ',');
 
-		$(this).children('.table-metricas').find('.header').find('.metrica-valor').text(soma);
+		$(group).children('.table-metricas').find('.header').find('.metrica-valor').text(soma);
 
-		var grupo = $(this).children('.dados-tit').text();
-		$(this).parent().siblings('.table-metricas').find('.dados:contains("' + grupo + '")').find('.metrica-valor').text(soma);
-
-		});
-	});
+		return soma;
 }
 
 function sum_metricas() {
+	
+	var soma = 0;
+	var grupo = null;
+
 	$('.dados-metricas').each(function() {
 		
-		var soma = 0;
+		$('.dados-metricas-estagio3').each(function() {
+		
+			soma = treat_sum_and_percentage(this);
+			grupo = $(this).children('.dados-tit').text();
+			$(this).parent().siblings('.table-metricas').find('.dados:contains("' + grupo + '")').find('.metrica-valor').text(soma);
 
-		$(this).children('.table-metricas').find('.dados').each(function() {
-			soma = soma + parseInt($(this).find('.metrica-valor').text().remove(/\./g));
 		});
 
-		$(this).children('.table-metricas').find('.dados').each(function() {
-			var relacao = parseInt($(this).find('.metrica-valor').text().remove(/\./g)) / soma;
-			var porcentagem = (100 * relacao).format(2, '.', ',');
-			$(this).children('.col-1').children('.metrica-porcentagem').text(porcentagem);
-		});
-
-		soma = soma.format(0, '.', ',');
-
-		$(this).children('.table-metricas').find('.header').find('.metrica-valor').text(soma);
-
-		var grupo = $(this).attr('class').remove(/dados-metricas |funil-.*/g).replace(/dados/, 'passo');
+		soma = treat_sum_and_percentage(this);
+		grupo = $(this).attr('class').remove(/dados-metricas |funil-.*/g).replace(/dados/, 'passo');
 		$('.' + grupo + ' .metrica-valor').text(soma);
 
 	});
@@ -147,7 +138,6 @@ function load_metricas() {
 
 $(function() {
 
-	sum_metricas_estagio3();
 	sum_metricas();
 	load_metricas();
 
