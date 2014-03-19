@@ -129,10 +129,13 @@ function load_metricas() {
 
 			passo_anterior = passo;
 			porcentagem_barra_anterior = porcentagem_barra;
+
 		}
 		else {
+
 			passo_anterior = $(this).attr('class').replace(/ /g,'.');
 			porcentagem_barra_anterior = 100;
+			
 		};
 	});
 
@@ -140,6 +143,7 @@ function load_metricas() {
 
 $(function() {
 
+	//Funções automáticas
 	sum_metricas();
 	load_metricas();
 
@@ -245,7 +249,7 @@ $(function() {
 		var chosen = $(this).text();
 		$(this).parents('.sub').children('span').text(chosen);
 
-		//Carrega os dados
+		//Carrega os dados -----------------------------------------------------------------------------------------------------------------------------------------
 
 	});
 
