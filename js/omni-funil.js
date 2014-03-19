@@ -59,7 +59,34 @@ function hide_metricas(clicked) {
 
 }
 
-function sum_grupos() {
+function sum_metricas_estagio3() {
+	$('.dados-metricas').each(function() {
+		$('.dados-metricas-estagio3').each(function() {
+		
+		var soma = 0;
+
+		$(this).children('.table-metricas').find('.dados').each(function() {
+			soma = soma + parseInt($(this).find('.metrica-valor').text().remove(/\./g));
+		});
+
+		$(this).children('.table-metricas').find('.dados').each(function() {
+			var relacao = parseInt($(this).find('.metrica-valor').text().remove(/\./g)) / soma;
+			var porcentagem = (100 * relacao).format(2, '.', ',');
+			$(this).children('.col-1').children('.metrica-porcentagem').text(porcentagem);
+		});
+
+		soma = soma.format(0, '.', ',');
+
+		$(this).children('.table-metricas').find('.header').find('.metrica-valor').text(soma);
+
+		var grupo = $(this).children('.dados-tit').text();
+		$(this).parent().siblings('.table-metricas').find('.dados:contains("' + grupo + '")').find('.metrica-valor').text(soma);
+
+		});
+	});
+}
+
+function sum_metricas() {
 	$('.dados-metricas').each(function() {
 		
 		var soma = 0;
@@ -76,11 +103,10 @@ function sum_grupos() {
 
 		soma = soma.format(0, '.', ',');
 
-		var grupo = $(this).attr('class').remove(/dados-metricas |funil-.*/g);
-		$('.' + grupo + ' tr.header span.metrica-valor').text(soma);
+		$(this).children('.table-metricas').find('.header').find('.metrica-valor').text(soma);
 
-		var passo = grupo.replace(/dados/, 'passo');
-		$('.' + passo + ' .metrica-valor').text(soma);
+		var grupo = $(this).attr('class').remove(/dados-metricas |funil-.*/g).replace(/dados/, 'passo');
+		$('.' + grupo + ' .metrica-valor').text(soma);
 
 	});
 }
@@ -121,7 +147,8 @@ function load_metricas() {
 
 $(function() {
 
-	sum_grupos();
+	sum_metricas_estagio3();
+	sum_metricas();
 	load_metricas();
 
 	//Funções dependendetes de eventos	
