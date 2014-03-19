@@ -235,6 +235,7 @@ $(function() {
 		$(this).parents('.line').next().removeClass('esconder');
 	});
 
+	//Submeter formulário TEMP
 	$('.container-utm.container-lote-utm :submit').click(function() {
 		$(this).parents('.container-utm').children('.line').addClass('esconder');
 		$(this).parents('.container-utm').children('.line:first').removeClass('esconder');
